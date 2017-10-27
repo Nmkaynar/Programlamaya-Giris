@@ -1,0 +1,30 @@
+
+package javaapplication12;
+
+import java.util.Scanner;
+
+
+public class JavaApplication12 {
+
+  
+    public static void main(String[] args) {
+   System.out.println("bir sayı girinz"); 
+   Scanner a=new Scanner(System.in);
+   int x=a.nextInt();
+   int h[][]=new int[x][x];
+           for (int i=0;i<x;i++)
+               h[i][x-1-i]=1;
+
+          for (int i=0;i<x;i++) 
+          {for(int j=0;j<x;j++)
+                   System.out.print(h[i][j]+"    ");
+          
+          System.out.println("");
+          }            
+           
+           
+           
+           
+    }
+    
+}
