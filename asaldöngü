@@ -1,0 +1,29 @@
+   System.out.println("kaçın çı asal sayıyı istiyorsunuz?");
+    int l=0,ş=new Scanner(System.in).nextInt();
+     if(ş==0)
+     {  System.out.println("girdiğiniz değer 0 dan büyük olmalıdır.");
+         ş=new Scanner(System.in).nextInt();
+     }
+         long i=2;
+    do
+    {    
+     int x=0;   
+        for(int k=2;k<i;k++)
+        {
+            if(i%k==0)
+                 break;
+            else 
+            x+=1;     
+        }
+        if(x==i-2) 
+          l++ ;
+                
+      if(l==ş)
+      {
+          System.out.println("f("+ş+")= "+i);
+      break;
+      }  
+      i++;
+   }while(i>0);   
+    }
+}
