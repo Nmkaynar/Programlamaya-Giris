@@ -1,0 +1,40 @@
+package tabancevirme;
+import java.util.Scanner;
+public class tabancevirme {
+ public static void main(String[] args) {
+        System.out.println("sayınızı tırnak içinde giriniz");
+        String x= new Scanner(System.in).next();
+        int a=Integer.valueOf(x,2);
+        System.out.println(a);    
+        
+      
+// YUKARIDAKİ BÖLÜM İKİLİK TABANDA GİRİLEN BİR SAYIYI 10 LUK TABANA ÇEVİRİR
+//  AŞAĞIDAKİ İSE 10 LUK TABANDA GİRİLEN BİR SAYIYI 2 LİK TABAA CEVİRİR
+     System.out.println("sayınızı girniz");
+     int q, i=0,c=0,d,e, y= new Scanner(System.in).nextInt();
+        q=y;
+       String k="";
+       d=y;
+        while(d>=2)
+        {
+         d=d/2; 
+         c++;
+        }
+       int h[]=new int[c+1];
+       
+        while(y>=2)
+        {
+         e=y%2;
+         h[i]=e;
+         i++;
+         y=y/2;
+         
+        }
+          h[c]=1;
+        for(int j=c;j>=0;j--)
+        {
+           k= k+h[j];
+        }
+     System.out.println(q+" sayısının ikilik tabanda karşılığı= "+k);
+ }
+}
