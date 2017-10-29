@@ -1,0 +1,50 @@
+
+package dizideki.en.büyük.pkg3.sayının.toplamı;
+
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+
+public class DizidekiEnBüyük3SayınınToplamı {
+
+   
+    public static void main(String[] args) {
+    System.out.println("dizinin boyutu kaç?");
+        int toplam = 0,a=new Scanner(System.in).nextInt();
+        int []h=new int[a];
+        
+        for (int i=0;i<a;i++)
+        {
+            System.out.println("dizinin elemanlarını giriniz");
+            int b=new Scanner(System.in).nextInt();
+            h[i]=b;
+        }
+       
+        Arrays.sort(h);
+        if(a==1)
+        {
+            toplam=h[0];
+        }
+         if(a==2)
+         {
+             toplam=h[0]+h[1];
+         }
+         if (a>=3)
+         {
+             toplam=h[a-1]+h[a-2]+h[a-3];
+         
+         }
+         System.out.println(toplam);           
+        
+        
+        
+        
+        
+        
+        
+        
+  
+}
+    
+}
