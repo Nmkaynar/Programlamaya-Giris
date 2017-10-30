@@ -1,0 +1,94 @@
+package bir.matrisin.determinantı;
+
+import java.util.Scanner;
+
+public class BİRMATRİSİNDETERMİNANTI {
+
+    public static void main(String[] args) {
+       System.out.println("kare matrisinizin boyutunu giriniz");
+     int ş=0,carpım=1,toplam=0,fark=0,det, p,i,j,a=new Scanner(System.in).nextInt();
+    if(a==1)
+     {  System.out.println("matrisin boyutu 1 den büyük olmalıdır");
+         a=new Scanner(System.in).nextInt();
+     }
+        int h[][]=new int[a][a];
+     //double tersh[][]=new double[a][a];
+     //aşağıdaki for döngüsünde elmanları klavyeden girlmesini istedik
+     for(i=0;i<a;i++)
+     {
+     for(j=0;j<a;j++)
+     {System.out.println("matrisin "+(i+1)+(j+1)+" indisli elemanını giriniz");
+     int l=new Scanner(System.in).nextInt();  
+      h[i][j]=l;
+     }   
+     } 
+     //aşağıdaki if yapısında matrisin boyutu iki ise bu işlemleri yapacak
+                if(a==2)
+                {
+                        det= (h[0][0]*h[1][1])-(h[0][1]*h[1][0]);
+                     
+     
+     
+                }
+    
+        else
+  {        
+     for(i=0;i<a;i++)
+     {
+   carpım= carpım*h[i][i];  
+       
+     } 
+     toplam=toplam+carpım;
+             
+     
+   //BU KISIMDA + TARAFI HALLETTİK 
+     carpım=1;
+     for(i=1;i<a;i++)
+     {
+     for(j=0;j<a;j++)
+     { 
+      
+     if(ş+i>=a)
+     {
+         ş=i*(-1);
+     }
+   carpım=carpım*h[ş+i][j];
+     ş++;
+     
+     } 
+  
+     toplam=toplam+carpım;
+     carpım=1;
+     }
+     
+ş=0;
+carpım=1;
+     
+     //BU KISIMDA - TARAFI HALLETTİK
+     for(i=0;i<a;i++)
+     {
+     for(j=a-1;j>=0;j--)
+     { 
+      
+     if(ş+i>=a)
+     {
+         ş=i*(-1);
+     }
+   carpım=carpım*h[ş+i][j];
+     ş++;
+      
+     } 
+     ş=0;
+    fark=fark+carpım;
+     carpım=1;
+     
+     
+     } 
+     det=toplam-fark;
+   }
+     
+     
+    System.out.println("matrisin determinantı= "+det);
+    }
+    
+}
